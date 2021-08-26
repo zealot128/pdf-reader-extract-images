@@ -45,6 +45,5 @@ module Pdf::Reader::ExtractImages
     end
   end
 end
-end
 
 
