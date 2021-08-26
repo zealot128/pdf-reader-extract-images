@@ -53,6 +53,8 @@ There are some PDFs which have tons of images. Make sure to limit the timeout of
 
 Also some PDFs product hundreds of images. Make sure to limit further processing down the line
 
+Unfortunately, there is no public test suite. We have a private test suite that tests live pdfs which we cannot share. If you'd like to contribute problematic PDFs, feel free to open PR!
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
