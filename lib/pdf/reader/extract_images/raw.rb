@@ -74,7 +74,8 @@ module Pdf::Reader::ExtractImages
       tiff = header.dup
       tiff << short_tag.call(256, 1, w) # image width
       tiff << short_tag.call(257, 1, h) # image height
-      tiff << short_tag.call(258, 1, 8) # bits per pixel
+      # 1-Bit-Bitmaps (Logos, Scans) kommen mit BitsPerComponent 1, nicht 8
+      tiff << short_tag.call(258, 1, bpc || 8) # bits per pixel
       tiff << short_tag.call(259, 1, 1) # compression
       tiff << short_tag.call(262, 1, 1) # colorspace - grayscale
       tiff << long_tag.call(273, 1, (10 + (tag_count * 12) + 4)) # data offset
